@@ -10,6 +10,7 @@ body {
     background-color: #727272;
 }
 
+/* Top Section containing Name/Title and Nav */
 header {
     display: flex;
     justify-content: space-between;
@@ -23,18 +24,18 @@ h1 {
     background-color: blue;
     box-shadow: 5px 5px 5px black;
     border-radius: 0px 30px 30px 0px;
+    color: #00ffff;
     font-family: cursive;
 }
 
 h2 {
-    font-size: 64px;
-    float: left;
+    flex: 1;
+    font-size: 32px;
     padding: 2%;
 }
 
 h3 {
     font-size: 30px;
-
 }
 
 nav {
@@ -58,11 +59,12 @@ nav a {
 }
 
 nav a:hover {
-    background-color: aqua;
+    background-color: #00ffff;
     border-radius: 5px;
     color: #000000;
 }
 
+/* Background image */
 .hero {
     flex-wrap: wrap;
     width: 100%;
@@ -72,46 +74,87 @@ nav a:hover {
     border: 6px solid #a3a3a3;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Start of About Me */
 .article {
-    display: column;
-    width: 100%;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+.article h2 {
+    width: 30%;
 }
 
 .article p {
     margin: 2%;
     font-size: 20px;
+    line-height: 1.5;
+}
+
+/* Start of Work article with links/images*/
+.article2 h2 {
+
 }
 
 section {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 220px;
+    flex: 3;
+}
+
+/* card/cardTop refer to the containers for both image and text*/
+.cardTop {
+    position: relative;
+}
+
+.card {
+    position: relative;
+    padding: 10px;
+}
+
+/* h3 is the text within the pictures */
+.cardTop h3 {
+    position: absolute;
+    bottom: 70%;
+    left: 1%;
+    background-color: #00ffff;
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 20%;
+    left: 2%;
+    background-color: #00ffff;
 }
 
 .cardTop img {
-    width: 400px;
+    width: 700px;
     min-width: 400px;
+    border: double thick #00ffff;
 }
 
 .card img {
-    width: 200px;
+    width: 300px;
     min-width: 200px;
+    border: double thick #00ffff;
 }
 
 .footer {
     display: flex;
     justify-content: center;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     padding: 10px;
     color: white;
     background-color: black;
+    border-top: double thick #00ffff;
 }
 
 .footer h4 {
-    position: fixed;
+    justify-content: left;
     left: 0;
     font-size: 32px;
     padding-left: 2%;
@@ -124,7 +167,7 @@ section {
 }
 
 .footer a {
-    color: white;
+    color: #00ffff;
     font-weight: bold;
     text-decoration: none;
     font-size: 30px;
